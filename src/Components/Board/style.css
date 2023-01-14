@@ -1,0 +1,84 @@
+.app {
+  background-image: 
+  url(
+"https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-size: "cover";
+  height: 100vh;
+  margin-top: -70px;
+  font-size:50px;
+  background-repeat:no-repeat; 
+}
+.container {
+  width: 40%;
+  margin: 5rem auto;
+ 
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+  border: 2px solid black;
+  background-color: rgb(236, 253, 253);
+}
+h1{
+  
+  font-size: 3rem;
+  color: white;
+  font-weight: 600;
+  margin: 2rem 30%;
+}
+h2 {
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+h3{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  
+}
+.board {
+  width: 47%;
+  height: 45%;
+ 
+  display: flex;
+  flex-wrap: wrap;
+}
+button {
+  background-color: red;
+  border-radius: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  padding: 1rem 2rem;
+  margin: 1rem 26%;
+}
+
+.flex {
+  display: flex;
+}
+.hide {
+  display: none;
+}
+.show {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.sec-btn {
+  font-size: 1rem;
+  padding: 0.2rem 0.8rem;
+  margin: 0.3rem 3.5rem;
+  background-color: yellow;
+  color: black;
+}
+.board-details {
+  width: 42%;
+  margin: 2rem 2rem;
+  text-align: initial;
+  font-size: 1.8rem;
+ 
+}
