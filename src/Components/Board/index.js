@@ -2,13 +2,11 @@ import { useState } from "react";
 import "./style.css";
 import Confetti from "react-confetti";
 
-
 function App() {
   let [boxes, setBoxes] = useState(["", "", "", "", "", "", "", "", ""]);
   let [currentPlayer, setCurrentPlayer] = useState("X");
   let [winner, setWinner] = useState("");
   let [history, setHistory] = useState([]);
-
 
   let handleBox = (i) => {
     if (boxes[i] || winner) {
@@ -52,8 +50,8 @@ function App() {
   let handleReset = () => {
     setCurrentPlayer("X");
     setBoxes(["", "", "", "", "", "", "", "", ""]);
-    setWinner("")
-    setHistory([])
+    setWinner("");
+    setHistory([]);
   };
 
   let handleStep = (i) => {
@@ -62,42 +60,43 @@ function App() {
 
   return (
     <>
-    <div className="app">
-
-      <div className="container ">
-   
-    <div className="flex">
-        <h1>Tic-Tac-Toe</h1>
-      </div> 
-      <div className="flex">
-        <div className="board">
-          {boxes.map((box, i) => (
-            <div key={i} onClick={() => handleBox(i)} className="box">
-              {box}
+      <div className="app">
+        <div className="container ">
+         
+          <div className="flex">
+            <h1>Tic-Tac-Toe</h1>
+          </div>
+          
+          <div className="flex">
+             <div className="board">
+              {boxes.map((box, i) => (
+                <div key={i} onClick={() => handleBox(i)} className="box">
+                  {box}
+                </div>
+              ))}
+              <button onClick={handleReset}>Reset </button>
             </div>
-          ))}
-          <button onClick={handleReset}>Reset </button>
-        </div>
 
-        <div className="board-details">
-          <h2 className={winner === null || winner === "" ? "show" : "hide"}>
-            Next Player: {currentPlayer}
-          </h2>
-          <h3 className={winner === null || winner === "" ? "hide" : "show"}>
-            Winner is : {winner}
-          </h3>
-          {history.map((elm, i) => (
-            <button onClick={() => handleStep(i)} className="sec-btn">
-              Go to step {i + 1}
-            </button>
-          ))}
+            <div className="board-details">
+              <h2
+                className={winner === null || winner === "" ? "show" : "hide"}
+              >
+                Next Player: {currentPlayer}
+              </h2>
+              <h3
+                className={winner === null || winner === "" ? "hide" : "show"}
+              >
+                Winner is : {winner}
+              </h3>
+              {history.map((elm, i) => (
+                <button onClick={() => handleStep(i)} className="sec-btn">
+                  Go to step {i + 1}
+                </button>
+              ))}
+            </div>
+          </div>
+          {winner ? <Confetti /> : null}
         </div>
-      </div>
-      {
-        winner? <Confetti /> : null
-      }
-
-      </div>
       </div>
     </>
   );

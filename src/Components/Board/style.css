@@ -48,6 +48,27 @@ h3{
   display: flex;
   flex-wrap: wrap;
 }
+@media only screen and (max-width:1024px){
+  .board {
+    width: 47%;
+    height: 45%;
+   
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+}
+@media only screen and (max-width:512px){
+  .board {
+    width: 80%;
+    height: 45%;
+   
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+}
+
 button {
   background-color: red;
   border-radius: 1.4rem;
